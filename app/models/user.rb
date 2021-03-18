@@ -3,7 +3,11 @@ class User < ApplicationRecord
   has_many :tests, through: :tests_users, dependent: :destroy
   has_many :authored_tests, class_name: 'Test', dependent: :nullify
 
-  def tests_level(level)
-    Test.joins(:tests_users).where(tests_users:{user_id: id}, level: level)
+  validates :name, presence: true, uniqueness: true
+  validates :email, presence: true, uniqueness: true
+
+  def tests_by_level(level)
+    tests.where(level: level)
   end
+
 end
