@@ -12,17 +12,11 @@ class Test < ApplicationRecord
 
 
   validates :title, presence: true, uniqueness: { scope: :level }
-  validates :level, numericality: { only_integer: true, greater_than: 0 }
-  validate :validate_max_level, on: :create
+  validates :level, numericality: { only_integer: true, greater_than: 0, less_than: 10 }
+
 
   def self.by_category(category)
     by_category(title_name).order(title: :desc).pluck(:title)
-  end
-
-  private
-
-  def validate_max_level
-    errors.add(:level) if level.to_i > 10
   end
 
 end
