@@ -1,7 +1,7 @@
 users = User.create!([
-  {name: :Alexey, admin: 1}
-  {name: :Egor, admin: 0}
-  {name: :Nastya, admin: 0}
+  {name: :Alexey, admin: 1, email: 'lukashevich2211@gmail.com'}
+  {name: :Egor, admin: 0, email: 'qwerty24164444@gmail.com'}
+  {name: :Nastya, admin: 0, email: '123qwe@yandex.ru'}
   ])
 
 categories = Category.create!([
