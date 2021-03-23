@@ -6,7 +6,7 @@ class Answer < ApplicationRecord
   validate :validate_count_of_answers, on: :create
 
   def validate_count_of_answers
-    errors.add(:title, 'Answers must be from 1 to 4') if answers.count > 4
+    errors.add(:title, 'Answers must be from 1 to 4') if question.answers.count > 4
   end
-  
+
 end
