@@ -7,12 +7,11 @@ class TestsController < ApplicationController
   rescue_from ActiveRecord::RecordNotFound, with: :rescue_with_test_not_found
 
   def index
-    result = ["Class: #{params.class}", "Parameters: #{params.inspect}"]
-    render plain: result.join("\n")
+    render json: { tests: Test.all }
   end
 
-  def start
-    render plain: 'Start certain test'
+  def all_tests
+    render json: { tests: Test.all }
   end
 
   def show
@@ -64,7 +63,7 @@ end
 
 render plain: 'All tests'
 render html: '<h1>All tests</h1>'.html_safe
-render json: { tests: User.all }
+render json: { tests: Test.all }
 render inline: '<p> My favourite language is <%= %[ybuR].reverse! %>!</p>'
 render file: 'public/hello', layout: false
 head 204
