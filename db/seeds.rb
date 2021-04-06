@@ -1,7 +1,8 @@
 users = User.create!([
-  {name: :Alexey, admin: 1, email: 'lukashevich2211@gmail.com'}
-  {name: :Egor, admin: 0, email: 'qwerty24164444@gmail.com'}
-  {name: :Nastya, admin: 0, email: '123qwe@yandex.ru'}
+  {name: :Alexey, admin: 1, email: 'lukashevich2211@gmail.com'},
+  {name: :Egor, admin: 0, email: 'qwerty24164444@gmail.com'},
+  {name: :Nastya, admin: 0, email: '123qwe@yandex.ru'},
+  {name: :Andrew, admin: 0, email: '12345qwe@mail.ru'}
   ])
 
 categories = Category.create!([
@@ -11,27 +12,27 @@ categories = Category.create!([
 ])
 
 tests = Test.create!([
-  {title: :Ruby, level: 2, category_id: categories[0].id},
-  {title: :HTML, level: 0, category_id: categories[1].id},
-  {title: :SQL, level: 0, category_id: categories[0].id},
-  {title: :Linux, level: 3, category_id: categories[2].id},
-  {title: :Rails, level: 1, category_id: categories[0].id}
+  {title: :Ruby, level: 2, category: categories[0], author: users[0]},
+  {title: :HTML, level: 1, category: categories[1], author: users[1]},
+  {title: :SQL, level: 1, category: categories[0], author: users[2]},
+  {title: :Linux, level: 4, category: categories[2], author: users[3]},
+  {title: :Rails, level: 3, category: categories[0], author: users[0]}
 ])
 
 questions = Question.create!([
-  {body: 'Какие есть способы объявления хешей?', test_id: tests[0].id},
-  {body: 'Какая типизации в Ruby', test_id: tests[0].id},
-  {body: 'Какой тег используется для того, чтобы гиперссылка открывалась в новой вкладке?', test_id: tests[1].id},
-  {body: 'Какие категории SQL можно выделить', test_id: tests[2].id},
-  {body: 'Приведите последовательность обработки http запроса приложением Rails', test_id: tests[4].id},
-  {body: 'Основные компоненты Linux', test_id: tests[3].id}
+  {body: 'Какие есть способы объявления хешей?', test: tests[0]},
+  {body: 'Какая типизации в Ruby', test: tests[0]},
+  {body: 'Какой тег используется для того, чтобы гиперссылка открывалась в новой вкладке?', test: tests[1]},
+  {body: 'Какие категории SQL можно выделить', test: tests[2]},
+  {body: 'Приведите последовательность обработки http запроса приложением Rails', test: tests[4]},
+  {body: 'Основные компоненты Linux', test: tests[3]}
 ])
 
 answers = Answer.create!([
-  {body: 'a = {},  a = Hash.new , a= Hash[]', question_id: questions[0].id},
-  {body: 'Ruby имеет динамическую, строгую, неявную типизацию', question_id: questions[1].id},
-  {body: 'Для того, чтобы ссылка открывалась в новом окне используется тег <_blank>', question_id: questions[2].id},
-  {body: 'В SQL можно выделить категории: DDL - Data Definition Language и DML Data Manipulation Language', question_id: questions[3].id},
-  {body: 'сервер - роутер - контроллер - модель - БД - модель - контроллер - представление - контроллер - сервер', question_id: questions[4].id},
-  {body: 'Ядро, системные библиотеки, системные утилиты', question_id: questions[5].id}
+  {body: 'a = {},  a = Hash.new , a= Hash[]', question: questions[0], correct: true},
+  {body: 'Ruby имеет динамическую, строгую, неявную типизацию', question: questions[1]},
+  {body: 'Для того, чтобы ссылка открывалась в новом окне используется тег <_blank>', question: questions[2], correct: true},
+  {body: 'В SQL можно выделить категории: DDL - Data Definition Language и DML Data Manipulation Language', question: questions[3]},
+  {body: 'сервер - роутер - контроллер - модель - БД - модель - контроллер - представление - контроллер - сервер', question: questions[4]},
+  {body: 'Ядро, системные библиотеки, системные утилиты', question: questions[5], correct: true}
 ])
