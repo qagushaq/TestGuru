@@ -1,7 +1,5 @@
 class TestsController < ApplicationController
-  #skip_before_action :find_test, only: :show
   before_action :find_test, only: %i[show]
-  #after_action :send_log_message
   around_action :log_execute_time
 
   rescue_from ActiveRecord::RecordNotFound, with: :rescue_with_test_not_found
@@ -57,26 +55,3 @@ class TestsController < ApplicationController
   end
 
 end
-
-
-=begin
-
-render plain: 'All tests'
-render html: '<h1>All tests</h1>'.html_safe
-render json: { tests: Test.all }
-render inline: '<p> My favourite language is <%= %[ybuR].reverse! %>!</p>'
-render file: 'public/hello', layout: false
-head 204
-head :no_content
-byebug
-render inline: '<% console %>'
-logger.info(self.object_id)
-respond_to do |format|
-  format.html { render plain: 'All users' }
-  format.json { render json: { users: User.all } }
-end
-def show
-  redirect_to root_path
-end
-
-=end
