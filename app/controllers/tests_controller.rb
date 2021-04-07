@@ -35,7 +35,7 @@ class TestsController < ApplicationController
     end
   end
 
-  def destroy#not_working
+  def destroy
     @test.destroy
     redirect_to tests_path
   end
