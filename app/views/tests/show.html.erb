@@ -1,4 +1,8 @@
 <p>
+  <%= link_to 'New question', new_test_question_path(@test) %>
+</p>
+
+<p>
   <strong>Title</strong>
   <%= @test.title %>
 </p>
@@ -22,5 +26,11 @@
   <strong>Updated at</strong>
   <%= @test.updated_at %>
 </p>
+
+<strong> <%= @test.questions.count %> вопроса в тесте:</strong>
+<table>
+  <%= render @test.questions %>
+</table>
+<br>
 <%= link_to 'Edit', edit_test_path(@test) %>
 <%= link_to 'Back', tests_path %>
