@@ -32,7 +32,6 @@ class QuestionsController < ApplicationController
   end
 
   def destroy
-    @test = @question.test
     @question.destroy
     redirect_to @question.test
   end

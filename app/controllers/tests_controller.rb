@@ -1,6 +1,5 @@
 class TestsController < ApplicationController
   before_action :find_test, only: %i[show edit update destroy]
-  #around_action :log_execute_time
   rescue_from ActiveRecord::RecordNotFound, with: :rescue_with_test_not_found
 
   def index
@@ -47,17 +46,6 @@ class TestsController < ApplicationController
 
   def find_test
     @test = Test.find(params[:id])
-  end
-
-  def send_log_message
-    logger.info ("Action [#{action_name}] was finished")
-  end
-
-  def log_execute_time
-    start = Time.now
-    yield
-    finish = Time.now - start
-    logger.info("Execution time: #{finish * 1000}ms")
   end
 
   def rescue_with_test_not_found
