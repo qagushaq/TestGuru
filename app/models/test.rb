@@ -1,7 +1,7 @@
 class Test < ApplicationRecord
-  has_many :test_passages
-  has_many :users, through: :test_passages
-  has_many :questions
+  has_many :test_passages, dependent: :destroy
+  has_many :users, through: :test_passages, dependent: :destroy
+  has_many :questions, dependent: :destroy
   belongs_to :category, optional: true
   belongs_to :author, class_name: "User", foreign_key: :user_id, optional: true
 
