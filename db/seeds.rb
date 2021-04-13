@@ -1,8 +1,8 @@
 users = User.create!([
-  {name: :Alexey, admin: 1, email: 'lukashevich2211@gmail.com'},
-  {name: :Egor, admin: 0, email: 'qwerty24164444@gmail.com'},
-  {name: :Nastya, admin: 0, email: '123qwe@yandex.ru'},
-  {name: :Andrew, admin: 0, email: '12345qwe@mail.ru'}
+  {name: :Alexey, admin: 1, email: 'lukashevich2211@gmail.com', password_digest: '$2a$12$rf79i4eRcOFFsO.Ed7vNaOnswo209fbTu9pLk1hDztXSQBdBxDhrm'},
+  {name: :Egor, admin: 0, email: 'qwerty24164444@gmail.com', password_digest: '$2a$12$rf79i4eRcOFFsO.Ed7vNaOnswo209fbTu9pLk1hDztXSQBdBxDhrm'},
+  {name: :Nastya, admin: 0, email: '123qwe@yandex.ru', password_digest: '$2a$12$rf79i4eRcOFFsO.Ed7vNaOnswo209fbTu9pLk1hDztXSQBdBxDhrm'},
+  {name: :Andrew, admin: 0, email: '12345qwe@mail.ru', password_digest: '$2a$12$rf79i4eRcOFFsO.Ed7vNaOnswo209fbTu9pLk1hDztXSQBdBxDhrm'}
   ])
 
 categories = Category.create!([
