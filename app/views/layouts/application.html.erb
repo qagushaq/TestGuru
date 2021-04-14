@@ -10,8 +10,16 @@
   </head>
 
   <body>
+
+    <div class="content">
+      <div class="content-inside">
+        <%= render 'shared/menu' %>
+        <%= render 'shared/flash' if !flash.empty? %>
+        <%= yield %>
+      </div>
+    </div>
+
     <%= link_to 'Home', root_path %>
-    <%= yield %>
     <%= render 'shared/footer' %>
   </body>
 </html>
