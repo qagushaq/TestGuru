@@ -27,10 +27,10 @@
   <%= @test.updated_at %>
 </p>
 
-<strong> <%= @test.questions.count %> вопроса в тесте:</strong>
+<strong> <%= render partial: 'questions/question', collection: @test.questions.count %> вопроса в тесте:</strong>
 <table>
-  <%= render @test.questions %>
+  <%= render partial: 'questions/question', collection: @test.questions %>
 </table>
 <br>
-<%= link_to 'Edit', edit_test_path(@test) %>
-<%= link_to 'Back', tests_path %>
+<%= link_to 'Edit', edit_admin_test_path(@test) %>
+<%= link_to 'Back', admin_tests_path %>

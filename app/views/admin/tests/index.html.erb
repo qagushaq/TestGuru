@@ -1,4 +1,7 @@
 <h1> Tricky Tests </h1>
+<p>
+  <%= link_to 'New test', new_admin_test_path %>
+</p>
 
 <hr>
 <table>
@@ -10,7 +13,7 @@
     <th>Count questions</th>
     <th>Created at</th>
     <th>Updated at</th>
-    <th">Actions </th>
+    <th colspan="4">Actions </th>
   </tr>
 
 <%= render @tests %>
