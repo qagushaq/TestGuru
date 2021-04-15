@@ -1,8 +1,6 @@
 users = User.create!([
-  {first_name: :Alexey, last_name: 'Lukashevich', email: 'lukashevich2211@gmail.com', password: '05399481', type: 'Admin'},
-  {first_name: :Egor, email: 'qwerty24164444@gmail.com'},
-  {first_name: :Nastya, email: '123qwe@yandex.ru'},
-  {first_name: :Andrew, email: '12345qwe@mail.ru'}
+  {first_name: :Alexey, last_name: 'Lukashevich', email: 'admin@gmail.com', password: '12345678', type: 'Admin'},
+  {first_name: :Nastya, last_name: 'Lukashevich', email: 'user@gmail.com', password: '12345678', type: 'User'},
   ])
 
 categories = Category.create!([
@@ -14,8 +12,8 @@ categories = Category.create!([
 tests = Test.create!([
   {title: :Ruby, level: 2, category: categories[0], author: users[0]},
   {title: :HTML, level: 1, category: categories[1], author: users[1]},
-  {title: :SQL, level: 1, category: categories[0], author: users[2]},
-  {title: :Linux, level: 4, category: categories[2], author: users[3]},
+  {title: :SQL, level: 1, category: categories[0], author: users[0]},
+  {title: :Linux, level: 4, category: categories[2], author: users[1]},
   {title: :Rails, level: 3, category: categories[0], author: users[0]}
 ])
 
