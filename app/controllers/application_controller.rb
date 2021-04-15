@@ -1,34 +1,19 @@
 class ApplicationController < ActionController::Base
-  
-  before_action :authenticate_user!
-  helper_method :current_user, :logged_in?, :redirect_back_or
+
+  before_action :configure_permitted_parameters, if: :devise_controller?
 
   private
 
-  def authenticate_user!
-    unless current_user
-      redirect_url
-      redirect_to login_path, alert: 'You need to login!'
+  def configure_permitted_parameters
+    devise_parameter_sanitizer.permit(:sign_up, keys: [:first_name, :last_name])
+  end
+
+  def after_sign_in_path_for(resource)
+    flash[:notice] = "Hello, #{current_user.first_name}!"
+    if current_user.admin?
+      admin_tests_path
+    else
+      super
     end
-
-    cookies[:email] = current_user&.email
   end
-
-  def current_user
-    @current_user ||= User.find_by(id: session[:user_id]) if session[:user_id]
-  end
-
-  def logged_in?
-    current_user.present?
-  end
-
-  def redirect_url
-    cookies[:forwarding_url] = request.original_url if request.get?
-  end
-
-  def redirect_back_or(default)
-    redirect_to(cookies[:forwarding_url] || default)
-    cookies.delete(:forwarding_url)
-  end
-
 end

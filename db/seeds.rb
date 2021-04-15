@@ -1,8 +1,6 @@
 users = User.create!([
-  {name: :Alexey, admin: 1, email: 'lukashevich2211@gmail.com', password_digest: '$2a$12$rf79i4eRcOFFsO.Ed7vNaOnswo209fbTu9pLk1hDztXSQBdBxDhrm'},
-  {name: :Egor, admin: 0, email: 'qwerty24164444@gmail.com', password_digest: '$2a$12$rf79i4eRcOFFsO.Ed7vNaOnswo209fbTu9pLk1hDztXSQBdBxDhrm'},
-  {name: :Nastya, admin: 0, email: '123qwe@yandex.ru', password_digest: '$2a$12$rf79i4eRcOFFsO.Ed7vNaOnswo209fbTu9pLk1hDztXSQBdBxDhrm'},
-  {name: :Andrew, admin: 0, email: '12345qwe@mail.ru', password_digest: '$2a$12$rf79i4eRcOFFsO.Ed7vNaOnswo209fbTu9pLk1hDztXSQBdBxDhrm'}
+  {first_name: :Alexey, last_name: 'Lukashevich', email: 'admin@gmail.com', password: '12345678', type: 'Admin'},
+  {first_name: :Nastya, last_name: 'Lukashevich', email: 'user@gmail.com', password: '12345678', type: 'User'},
   ])
 
 categories = Category.create!([
@@ -14,8 +12,8 @@ categories = Category.create!([
 tests = Test.create!([
   {title: :Ruby, level: 2, category: categories[0], author: users[0]},
   {title: :HTML, level: 1, category: categories[1], author: users[1]},
-  {title: :SQL, level: 1, category: categories[0], author: users[2]},
-  {title: :Linux, level: 4, category: categories[2], author: users[3]},
+  {title: :SQL, level: 1, category: categories[0], author: users[0]},
+  {title: :Linux, level: 4, category: categories[2], author: users[1]},
   {title: :Rails, level: 3, category: categories[0], author: users[0]}
 ])
 
