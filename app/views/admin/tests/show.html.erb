@@ -27,7 +27,7 @@
   <%= @test.updated_at %>
 </p>
 
-<strong> <%= render partial: 'questions/question', collection: @test.questions.count %> вопроса в тесте:</strong>
+<strong> <%= @test.questions.count %> вопроса в тесте:</strong>
 <table>
   <%= render partial: 'questions/question', collection: @test.questions %>
 </table>
