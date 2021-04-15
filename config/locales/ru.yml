@@ -1,4 +1,7 @@
 ru:
+  tests:
+    index:
+      header: "Доступные тесты"
   activerecord:
     attributes:
       user:
