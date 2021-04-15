@@ -1,5 +1,5 @@
 users = User.create!([
-  {first_name: :Alexey, email: 'lukashevich2211@gmail.com', type: 'Admin'},
+  {first_name: :Alexey, last_name: 'Lukashevich', email: 'lukashevich2211@gmail.com', password: '05399481', type: 'Admin'},
   {first_name: :Egor, email: 'qwerty24164444@gmail.com'},
   {first_name: :Nastya, email: '123qwe@yandex.ru'},
   {first_name: :Andrew, email: '12345qwe@mail.ru'}

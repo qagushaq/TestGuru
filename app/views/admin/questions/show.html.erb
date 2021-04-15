@@ -8,6 +8,9 @@
   <%= @question.body %>
 </p>
 
+<h3>Answers</h3>
+<%= link_to 'New answer', new_admin_question_answer_path(@question) %>
+
 <ol>
   <%= render @question.answers %>
 </ol>
@@ -18,5 +21,5 @@
       admin_question_path(@question),
       method: :delete,
       data: { confirm: 'Are you sure?' } %>
-  <%= link_to 'Back', test_path(@question.test) %>
+  <%= link_to 'Back', admin_test_path(@question.test) %>
 </p>
