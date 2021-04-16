@@ -1,10 +1,30 @@
 ru:
   activerecord:
     models:
+      category: "Категория"
       test: "Тест"
+      question: "Вопрос"
+      answer: "Ответ"
+      testpassage: "Пройденные тесты"
+      user: "Пользователь"
+      admin: "Администратор"
     attributes:
       test:
         title: "Название"
-    errors:
-      messages:
-        blank: "не может быть пустым"
+        level: "Уровень"
+        category: "Категория"
+        author: "Автор"
+      question:
+        body: "Содержание вопроса"
+      answer:
+        body: "Содержание вопроса"
+        correct: "Правильность"
+      user:
+        email: "Email"
+        password: "Пароль"
+      errrors:
+        messages:
+          accepted: "Поле должно быть отмечено"
+          blank: "Поле не может быть пустым"
+          confirmation: "Пе совпадает с %{attribute}"
+          empty: "Поле %{attribute} не может быть пустым"
