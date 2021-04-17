@@ -1,33 +1,92 @@
-# Files in the config/locales directory are used for internationalization
-# and are automatically loaded by Rails. If you want to use locales other
-# than English, add the necessary files in this directory.
-#
-# To use the locales, use `I18n.t`:
-#
-#     I18n.t 'hello'
-#
-# In views, this is aliased to just `t`:
-#
-#     <%= t('hello') %>
-#
-# To use a different locale, set it with `I18n.locale`:
-#
-#     I18n.locale = :es
-#
-# This would use the information in config/locales/es.yml.
-#
-# The following keys must be escaped otherwise they will not be retrieved by
-# the default I18n backend:
-#
-# true, false, on, off, yes, no
-#
-# Instead, surround them with single quotes.
-#
-# en:
-#   'true': 'foo'
-#
-# To learn more, please read the Rails Internationalization guide
-# available at https://guides.rubyonrails.org/i18n.html.
+ru:
+  helpers:
+    submit:
+      test:
+        create: "Create test"
+        update: "Update test"
+    label:
+      test:
+        title: "Title"
+        level: "Level"
+        author: "Author"
+        category_id: "Category"
 
-en:
-  hello: "Hello world"
+  admin:
+    tests:
+      index:
+        header: "Available tests"
+        title: "Название"
+        level: "Level"
+        category: "Category"
+        author: "Author"
+        amount_questions: "Amount questions"
+        created: "Created"
+        updated: "Updated"
+        actions: "Actions"
+        create: "Create tes"
+        test:
+          show: "Show"
+          edit: "Edit test"
+          delete: "Delete test"
+          back: "Back to tests"
+      new:
+        header: "Create new test"
+        back: "Back to tests"
+      form:
+        prompt: "Choose category"
+        back: "Back to tests"
+      show:
+        header: "About test"
+        title: "Title"
+        level: "Level"
+        category: "Category"
+        created: "Created"
+        updated: "Updated"
+        amount_questions: "Amount questions"
+        questions_counter:
+          one: "%{count} question"
+          other: "%{count} questions"
+        back: "Back to tests"
+        edit: "Edit test"
+      edit:
+        header: "Edit test"
+        back: "Back to tests"
+
+  shared:
+    errors:
+      header:
+        one: "%{count} error detected"
+        other: "%{count} errors detected"
+
+  tests:
+    test:
+      start: "Start test"
+    index:
+      header: "Available tests"
+      title: "Title"
+      level: "Level"
+      category: "Category"
+      author: "Author"
+      amount_questions: "Amount questions"
+      created: "Created"
+      updated: "Updated"
+      actions: "Actions"
+
+  test_passages:
+    show:
+      passind_test: "You are passing %{test} test"
+      from: "из"
+      next: 'Next question'
+      questions_counter:
+        one: "%{count} question"
+        many: "%{count} questions"
+    result:
+      completed: "%{test} test is completed."
+      passed: "Test passed"
+      notpassed: "Test not passed"
+      back: "Back to tests"
+      correctpercent: "Answered correct on"
+
+  tests_mailer:
+    completed_test:
+      subject: "You have completed the test"

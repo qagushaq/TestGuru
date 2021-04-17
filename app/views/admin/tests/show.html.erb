@@ -1,33 +1,36 @@
+<h1><%= t('.header')%> </h1>
+
 <p>
-  <strong>Title</strong>
-  <%= @test.title %>
+  <strong><%= t('.title') %></strong>
+   <%= @test.title %>
 </p>
 
 <p>
-  <strong>Level</strong>
+  <strong><%= t('.level')%></strong>
   <%= @test.level %>
 </p>
 
 <p>
-  <strong>Category</strong>
+  <strong><%= t('.category')%></strong>
   <%= @test.category.title %>
 </p>
 
 <p>
-  <strong>Created at</strong>
+  <strong><%= t('.created')%></strong>
   <%= @test.created_at %>
 </p>
 
 <p>
-  <strong>Updated at</strong>
+  <strong><%= t('.updated') %></strong>
   <%= @test.updated_at %>
 </p>
 
-<strong> <%= @test.questions.count %> вопроса в тесте:</strong>
+<strong> <%= @test.questions.count %> - <%= t('.amount_questions')%> </strong>
 <table>
   <%= render @test.questions %>
 
 </table>
 <br>
-<%= link_to 'Edit', edit_admin_test_path(@test) %>
-<%= link_to 'Back', admin_tests_path %>
+
+<%= link_to t('.edit'), edit_admin_test_path(@test) %>
+<%= link_to t('.back'), admin_tests_path%>

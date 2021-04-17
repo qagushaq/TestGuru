@@ -1,4 +1,102 @@
 ru:
+  helpers:
+    submit:
+      test:
+        create: "Создать тест"
+        update: "Обновить тест"
+    label:
+      test:
+        title: "Название"
+        level: "Уровень"
+        author: "Автор"
+        category_id: "Категория"
+
+  admin:
+    tests:
+      index:
+        header: "Доступные тесты"
+        title: "Название"
+        level: "Уровень"
+        category: "Категория"
+        author: "Автор"
+        amount_questions: "Количество вопросов"
+        created: "Создано"
+        updated: "Обновлено"
+        actions: "Действия"
+        create: "Создать тест"
+        test:
+          show: "Показать"
+          edit: "Изменить тест"
+          delete: "Удалить тест"
+          back: "К списку тестов"
+      new:
+        header: "Создать новый тест"
+        back: "К списку тестов"
+      form:
+        prompt: "Выберите категорию"
+        back: "К списку тестов"
+      show:
+        header: "О тесте"
+        title: "Название"
+        level: "Уровень"
+        category: "Категория"
+        countq: "Количество вопросов"
+        created: "Создано"
+        updated: "Обновлено"
+        amount_questions: "Количество вопросов в тесте:"
+        questions_counter:
+          one: "%{count} вопрос"
+          few: "%{count} вопроса"
+          many: "%{count} вопросов"
+          other: "%{count} вопроса"
+        back: "К списку тестов"
+        edit: "Редактировать тест"
+      edit:
+        header: "Редактировать тест"
+        back: "К списку тестов"
+
+  shared:
+    errors:
+      header:
+        few: "Обнаружено %{count} ошибки"
+        many: "Обнаружено %{count} ошибок"
+        one: "Обнаружено %{count} ошибка"
+        other: "Обнаружено %{count} ошибки"
+
+  tests:
+    test:
+      start: "Начать тест"
+    index:
+      header: 'Доступные тесты'
+      title: "Название"
+      level: "Уровень"
+      category: "Категория"
+      author: "Автор"
+      amount_questions: "Количество вопросов"
+      created: "Создано"
+      updated: "Обновлено"
+      actions: "Действия"
+
+  test_passages:
+    show:
+      passind_test: "Сейчас вы проходите %{test} тест"
+      from: "из"
+      next: 'Следующий вопрос'
+      questions_counter:
+        one: "%{count} вопроса"
+        few: "%{count} вопросов"
+        many: "%{count} вопросов"
+    result:
+      completed: "%{test} тест завершен."
+      passed: "Тест пройден"
+      notpassed: "Тест не пройден"
+      back: "К списку тестов"
+      correctpercent: "Отвечено верно на"
+
+  tests_mailer:
+    completed_test:
+      subject: "Вы завершили тест"
+
   activerecord:
     attributes:
       user:

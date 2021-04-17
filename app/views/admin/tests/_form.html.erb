@@ -14,7 +14,7 @@
 
   <p>
    <%= form.label :category_id %></br>
-   <%= form.collection_select :category_id, Category.all, :id, :title, prompt: true %>
+   <%= form.collection_select :category_id, Category.all, :id, :title, prompt: t('.prompt')%>
   </p>
 
   <p>
@@ -22,5 +22,8 @@
     <%= form.collection_select :user_id, User.all, :id, :first_name, prompt: true %>
   </p>
 
-  <p><%= form.submit%></p>
+  <p><%= form.submit %></p>
+
 <% end %>
+
+<%= link_to t('.back'), admin_tests_path%>
