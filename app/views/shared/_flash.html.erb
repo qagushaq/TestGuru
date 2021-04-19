@@ -1,3 +1,10 @@
-<% flash.each do |type, message| %>
-  <%= content_tag :div, message, class: "flash #{type}" %>
+<% flash.each do |flag, message| %>
+  <div class="col-12 col-md-4 mt-3">
+  <%= tag.div class: ["alert", bootstrap_color(flag), "alert-dismissible", "fade", "show"], role: "alert" do  %>
+    <%= flash_message(flag)%>
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+  <%end%>
+  </div>
 <% end %>
