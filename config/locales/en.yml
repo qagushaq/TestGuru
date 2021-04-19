@@ -1,4 +1,5 @@
 ru:
+  question_from: 'Question from test'
   helpers:
     submit:
       test:
@@ -86,6 +87,9 @@ ru:
       notpassed: "Test not passed"
       back: "Back to tests"
       correctpercent: "Answered correct on"
+    gist:
+      success: "Gist was successfully created"
+      failure: "An error occurred while saving gist"
 
   tests_mailer:
     completed_test:

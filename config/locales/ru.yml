@@ -1,4 +1,5 @@
 ru:
+  question_from: 'Вопрос из теста'
   helpers:
     submit:
       test:
@@ -92,6 +93,9 @@ ru:
       notpassed: "Тест не пройден"
       back: "К списку тестов"
       correctpercent: "Отвечено верно на"
+    gist:
+      success: "Gist успешно сохранен"
+      failure: "Во время сохранения gist произошла ошибка"
 
   tests_mailer:
     completed_test:
