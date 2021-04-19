@@ -15,14 +15,9 @@
 
   <body>
 
-    <div class="content">
-      <div class="content-inside">
-        <%= render 'shared/nav' %>
-        <%= render 'shared/flash' if !flash.empty? %>
-        <%= yield %>
-      </div>
-    </div>
-
+    <%= render '/shared/header'%>
+    <%= render 'shared/flash' if !flash.empty? %>
+    <%= yield %>
     <%= link_to 'Home', root_path %>
     <%= render 'shared/footer' %>
   </body>
