@@ -35,6 +35,9 @@ gem 'faraday'
 # Localization
 gem 'rails-i18n', '~> 6.0.0'
 
+# git_octokit
+gem "octokit", "~> 4.0"
+
 # UI
 gem 'jquery-rails'
 gem 'bootstrap', '~> 5.0.0.beta2'
@@ -53,6 +56,8 @@ group :development do
   gem 'spring-watcher-listen', '~> 2.0.0'
 
   gem 'letter_opener'
+
+  gem 'dotenv-rails'
 end
 
 group :test do
@@ -61,6 +66,8 @@ group :test do
   gem 'selenium-webdriver'
   # Easy installation and use of web drivers to run system tests with browsers
   gem 'webdrivers'
+  gem 'dotenv-rails'
+
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

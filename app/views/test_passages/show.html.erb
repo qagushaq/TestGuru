@@ -26,7 +26,7 @@
   </div>
 
   <div class="form-group col-12 col-md-6 ml-3">
-    <%= link_to 'Create Gist', gist_test_passage_path(@test_passage), method: :post%>
+    <%= link_to 'Create Gist', test_passage_gist_path(@test_passage), method: :post%>
     <%= form.submit t('.next'), class: "btn btn-success" %>
     <% end %>
   </div>
