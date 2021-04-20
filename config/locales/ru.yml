@@ -77,6 +77,10 @@ ru:
       created: "Создано"
       updated: "Обновлено"
       actions: "Действия"
+    gists:
+      create:
+        gist_success_html: 'Gist %{gist} успешно создан.'
+        gist_fail: 'Ошибка! Что-то пошло не так :('
 
   test_passages:
     show:
@@ -85,8 +89,7 @@ ru:
       next: 'Следующий вопрос'
       questions_counter:
         one: "%{count} вопроса"
-        few: "%{count} вопросов"
-        many: "%{count} вопросов"
+        other: "%{count} questions"
     result:
       completed: "%{test} тест завершен."
       passed: "Тест пройден"

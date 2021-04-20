@@ -1,15 +1,17 @@
 class GitHubClient
-  
+
+  attr_accessor :client
+
   def initialize
-    @client=setup_github_client
+    @client = setup_github_client
   end
 
   def create_gist(params)
-    @http_client.post('gists') do |request|
-      request.headers['Authorization'] = "token #{ACCESS_TOKEN}"
-      request.headers['Content-Type'] = "application/json"
-      request.body = params.to_json
-    end
+    client.create_gist(params)
+  end
+
+  def last_response_success?
+    client.last_response.status == 201
   end
 
   private

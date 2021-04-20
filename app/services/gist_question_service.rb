@@ -1,5 +1,7 @@
 class GistQuestionService
 
+  attr_reader :client, :test, :question, :response
+
   def initialize(question, client: nil)
     @client = client || GitHubClient.new
     @question = question
@@ -7,8 +9,16 @@ class GistQuestionService
   end
 
   def call
-    client.create_gist(gist_params)
+    @response = client.create_gist(gist_params)
   end
+
+  def success?
+    client.last_response_success?
+  end
+
+  def url_hash
+    response[:id]
+  end  
 
   private
 
