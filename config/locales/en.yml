@@ -84,7 +84,7 @@ ru:
       next: 'Next question'
       questions_counter:
         one: "%{count} question"
-        many: "%{count} questions"
+        other: "%{count} questions"
     result:
       completed: "%{test} test is completed."
       passed: "Test passed"

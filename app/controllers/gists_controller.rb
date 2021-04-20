@@ -1,4 +1,4 @@
-class GistsController<ApplicationControler
+class GistsController < ApplicationController
 
   before_action :set_test_passage
 

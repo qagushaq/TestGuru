@@ -89,7 +89,8 @@ ru:
       next: 'Следующий вопрос'
       questions_counter:
         one: "%{count} вопроса"
-        other: "%{count} questions"
+        few: "%{count} вопросов"
+        many: "%{count} вопросов"
     result:
       completed: "%{test} тест завершен."
       passed: "Тест пройден"
