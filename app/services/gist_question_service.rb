@@ -8,11 +8,6 @@ class GistQuestionService
     @test = @question.test
   end
 
-  def create_gist(params)
-    client.create_gist(params)
-  end
-
-
   def call
     @response = client.create_gist(gist_params)
   end

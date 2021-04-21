@@ -25,11 +25,19 @@ ru:
         updated: "Обновлено"
         actions: "Действия"
         create: "Создать тест"
+        are_sure: "Вы уверены?"
+        show: "Показать"
+        edit: "Редактировать"
+        delete: "Удалить"
         test:
           show: "Показать"
           edit: "Изменить тест"
           delete: "Удалить тест"
           back: "К списку тестов"
+      test:
+        show: "Показать"
+        edit: "Изменить"
+        delete:  "Удалить"
       new:
         header: "Создать новый тест"
         back: "К списку тестов"
@@ -50,11 +58,54 @@ ru:
           few: "%{count} вопроса"
           many: "%{count} вопросов"
           other: "%{count} вопроса"
+        new_question: "Создать новый вопрос"
         back: "К списку тестов"
         edit: "Редактировать тест"
       edit:
         header: "Редактировать тест"
         back: "К списку тестов"
+
+    questions:
+      question:
+        show: "Показать"
+        edit: "Изменить"
+        delete: "Удалить"
+      show:
+        test: "Тест"
+        body: "Вопрос"
+        new_answer: "Новый ответ"
+        edit: "Редактировать"
+        delete: "Удалить"
+        back: "Назад"
+      new:
+        header: "Создать новый вопрос"
+        cancel: "Отменить"
+      edit:
+        cancel: "Отменить"
+
+    answers:
+      answer:
+        show: "Показать"
+        edit: "Изменить"
+        delete: "Удалить"
+      show:
+        question: "Вопрос"
+        answer: "Ответ"
+        correct: "Верно"
+        edit: "Редактировать"
+        back: "Назад"
+      edit:
+        header: "Редактирование ответа"
+        show: "Показать"
+      form:
+        back: "Назад"
+
+    gists:
+      index:
+        header: "Просмотр Gist"
+        question: "Вопрос"
+        gist_url: "Gist ссылка"
+        user_email: "Почта"
 
   shared:
     errors:

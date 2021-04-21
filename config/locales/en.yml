@@ -13,6 +13,10 @@ ru:
         category_id: "Category"
 
   admin:
+    test:
+      show: "Show"
+      edit: "Edit"
+      delete: "Delete"
     tests:
       index:
         header: "Available tests"
@@ -30,6 +34,10 @@ ru:
           edit: "Edit test"
           delete: "Delete test"
           back: "Back to tests"
+      test:
+        show: "Show"
+        edit: "Edit"
+        delete:  "Delete"
       new:
         header: "Create new test"
         back: "Back to tests"
@@ -47,11 +55,50 @@ ru:
         questions_counter:
           one: "%{count} question"
           other: "%{count} questions"
+        new_question: "Create new question"
         back: "Back to tests"
         edit: "Edit test"
       edit:
         header: "Edit test"
         back: "Back to tests"
+    questions:
+      show:
+        test: "Test"
+        body: "Body"
+        new_answer: "New answer"
+        edit: "Edit"
+        delete: "Delete"
+        back: "Back"
+      new:
+        header: "Create New Question"
+        cancel: "Cancel"
+      edit:
+        cancel: "Cancel"
+
+    answers:
+      answer:
+        show: "Show"
+        edit: "Edit"
+        delete: "Delete"
+      show:
+        question: "Question"
+        answer: "Answer"
+        correct: "Correct"
+        edit: "Edit"
+        back: "Back"
+
+      edit:
+        show: "Back"
+        back: "Back"
+      form:
+        back: "Back"
+
+    gists:
+      index:
+        header: "View Gists"
+        question: "Question"
+        gist_url: "Gist url"
+        user_email: "Email"
 
   shared:
     errors:
