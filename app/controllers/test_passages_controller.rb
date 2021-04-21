@@ -10,6 +10,7 @@ class TestPassagesController < ApplicationController
   end
 
   def create
+    @test_passage = TestPassage.find(params[:test_passage_id])
     gist = GistQuestionService.new(@test_passage.current_question)
     gist.call
     if gist.success?
@@ -20,17 +21,6 @@ class TestPassagesController < ApplicationController
       flash.now[:notice] = t('.failure')
     end
      redirect_to @test_passage
-  end
-
-  def gist
-    result = GistQuestionService.new(@test_passage.current_question).call
-    if result.success?
-      flash_options
-      { notice: t.('.success') }
-    else
-      { alert: t.('.failure') }
-    end
-    redirect_to @test_passage, flash_options
   end
 
   def update
