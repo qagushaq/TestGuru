@@ -8,12 +8,17 @@ class GistQuestionService
     @test = @question.test
   end
 
+  def create_gist(params)
+    client.create_gist(params)
+  end
+
+
   def call
     @response = client.create_gist(gist_params)
   end
 
   def success?
-    client.last_response_success?
+    client.last_response.status == 201
   end
 
   def url_hash
