@@ -3,7 +3,7 @@ class GistQuestionService
   attr_reader :client, :test, :question, :response
 
   def initialize(question, client: nil)
-    @client = client || GitHubClient.new
+    @client = client || Octokit::Client.new(access_token:ENV['PERSONAL_GITHUB_ACCESS_TOKEN'])
     @question = question
     @test = @question.test
   end
@@ -18,13 +18,12 @@ class GistQuestionService
 
   def url_hash
     response[:id]
-  end  
+  end
 
   private
 
   def gist_params
     { description: "#{I18n.t('.question_from')} #{test.title}",
-      public: true,
       files: { 'test-guru-question.txt' => { content: gist_content } } }
   end
 
