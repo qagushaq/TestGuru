@@ -1,8 +1,8 @@
 class GistsController < ApplicationController
 
-  before_action :set_test_passage
-
   def create
+
+    @test_passage = TestPassage.find(params[:test_passage_id])
     gist = GistQuestionService.new(@test_passage.current_question)
 
     gist.call
@@ -13,13 +13,7 @@ class GistsController < ApplicationController
     else
       flash.now[:notice] = t('.fail')
     end
-     render '/test_passages/show'
-  end
-
-  private
-
-  def set_test_passage
-    @test_passage = TestPassage.find(params[:id])
+     redirect_to @test_passage
   end
 
 end
