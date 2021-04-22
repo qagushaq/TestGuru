@@ -1,4 +1,5 @@
 ru:
+  question_from: 'Question from test'
   helpers:
     submit:
       test:
@@ -12,6 +13,10 @@ ru:
         category_id: "Category"
 
   admin:
+    test:
+      show: "Show"
+      edit: "Edit"
+      delete: "Delete"
     tests:
       index:
         header: "Available tests"
@@ -29,6 +34,10 @@ ru:
           edit: "Edit test"
           delete: "Delete test"
           back: "Back to tests"
+      test:
+        show: "Show"
+        edit: "Edit"
+        delete:  "Delete"
       new:
         header: "Create new test"
         back: "Back to tests"
@@ -46,11 +55,50 @@ ru:
         questions_counter:
           one: "%{count} question"
           other: "%{count} questions"
+        new_question: "Create new question"
         back: "Back to tests"
         edit: "Edit test"
       edit:
         header: "Edit test"
         back: "Back to tests"
+    questions:
+      show:
+        test: "Test"
+        body: "Body"
+        new_answer: "New answer"
+        edit: "Edit"
+        delete: "Delete"
+        back: "Back"
+      new:
+        header: "Create New Question"
+        cancel: "Cancel"
+      edit:
+        cancel: "Cancel"
+
+    answers:
+      answer:
+        show: "Show"
+        edit: "Edit"
+        delete: "Delete"
+      show:
+        question: "Question"
+        answer: "Answer"
+        correct: "Correct"
+        edit: "Edit"
+        back: "Back"
+
+      edit:
+        show: "Back"
+        back: "Back"
+      form:
+        back: "Back"
+
+    gists:
+      index:
+        header: "View Gists"
+        question: "Question"
+        gist_url: "Gist url"
+        user_email: "Email"
 
   shared:
     errors:
@@ -71,6 +119,10 @@ ru:
       created: "Created"
       updated: "Updated"
       actions: "Actions"
+    gists:
+      create:
+        gist_success_html: 'Gist %{gist} successfuly created'
+        gist_fail: 'Something go wrong!!'
 
   test_passages:
     show:
@@ -79,13 +131,16 @@ ru:
       next: 'Next question'
       questions_counter:
         one: "%{count} question"
-        many: "%{count} questions"
+        other: "%{count} questions"
     result:
       completed: "%{test} test is completed."
       passed: "Test passed"
       notpassed: "Test not passed"
       back: "Back to tests"
       correctpercent: "Answered correct on"
+    gist:
+      success: "Gist was successfully created"
+      failure: "An error occurred while saving gist"
 
   tests_mailer:
     completed_test:

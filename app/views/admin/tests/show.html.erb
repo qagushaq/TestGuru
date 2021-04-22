@@ -30,7 +30,10 @@
   <%= render @test.questions %>
 
 </table>
-<br>
 
+<br><br>
+<h5>
+  <%= link_to t('.new_question'), new_admin_test_question_path(@test) %>
+<h5>
 <%= link_to t('.edit'), edit_admin_test_path(@test) %>
 <%= link_to t('.back'), admin_tests_path%>

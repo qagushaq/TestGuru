@@ -1,6 +1,6 @@
 module ApplicationHelper
 
-  COLORS={alert: 'danger', notice: 'warning', greeting: 'success', goodbye: 'primary'}
+  COLORS = { alert: 'danger', notice: 'warning', greeting: 'success', goodbye: 'primary' }
 
   def current_year
     "#{Time.current.year.to_i}"
