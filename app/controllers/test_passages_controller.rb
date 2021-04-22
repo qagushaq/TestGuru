@@ -9,7 +9,7 @@ class TestPassagesController < ApplicationController
   def result
   end
 
-  def create_gist
+  def gist
     gist = GistQuestionService.new(@test_passage.current_question)
     gist.call
     if gist.success?
