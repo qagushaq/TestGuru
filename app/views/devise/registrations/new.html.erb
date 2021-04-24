@@ -18,11 +18,6 @@
     <%= f.text_field :last_name, autofocus: true, autocomplete: "last_name" %>
   </div>
 
-   <div class="field">
-    <%= f.label :username,  t('.username')%><br />
-    <%= f.text_field :username, autofocus: true, autocomplete: "username" %>
-  </div>
-
   <div class="field">
     <%= f.label :password,  t('.password') %>
     <% if @minimum_password_length %>
@@ -34,6 +29,8 @@
   <div class="field">
     <%= f.label :password_confirmation,  t('.password_confirmation') %><br />
     <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
+    <i class="confirm hide" style="color:green"></i>
+    <i class="notconfirm hide" style="color:red"></i>
   </div>
 
   <div class="actions">

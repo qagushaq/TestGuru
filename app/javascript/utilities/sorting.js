@@ -24,7 +24,6 @@ function sortRowsByTitle() {
     this.querySelector('.octicon-arrow-down').classList.remove('hide')
   }
 
-
   let sortedTable = document.createElement('table')
   sortedTable.classList.add('table')
   sortedTable.appendChild(rows[0])
