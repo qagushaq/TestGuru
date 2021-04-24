@@ -24,6 +24,8 @@
   <div class="field">
     <%= f.label :password_confirmation %><br />
     <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
+    <i class="confirm hide" style="color:green"></i>
+    <i class="notconfirm hide" style="color:red"></i>
   </div>
 
   <div class="field">
