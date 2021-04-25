@@ -1,5 +1,6 @@
-@import "bootstrap";
-@import "flash";
-@import "nav";
-@import "scaffolds";
-@import "test_passages";
+/*
+ *= require_tree .
+ *= require_self
+*/
+@import "typography/icons";
+@import "global";
