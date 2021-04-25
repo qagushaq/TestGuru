@@ -41,6 +41,8 @@ ru:
       new:
         header: "Create new test"
         back: "Back to tests"
+      form_inline:
+        submit: "OK"
       form:
         prompt: "Choose category"
         back: "Back to tests"
