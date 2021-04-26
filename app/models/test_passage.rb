@@ -22,8 +22,16 @@ class TestPassage < ApplicationRecord
     percent >= PERCENTS_SUCCESS
   end
 
+  def progress_percent
+    ((current_question_number.to_f - 1) / total_questions * 100).round
+  end
+
   def percent
     (correct_question.to_f * 100 / test.questions.count).round
+  end
+
+  def total_questions
+    test.questions.size
   end
 
   def current_question_number
