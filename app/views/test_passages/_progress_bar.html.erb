@@ -1,5 +1,4 @@
-<div class= 'col-12 col-md-6'>
-  <%= content_tag :div, class: 'progress-bar', data:{question_number: test_passage.current_question_number, total_questions: test_passage.test.questions.count} do  %>
-    <span><%= @test_passage.progress_percent %><b>% </b> <%= test_passage.current_question_number %> <%= t('.from')%> <%= t('.questions_counter', count: test_passage.test.questions.count)%></span>
-  <%end%>
-</div>
+<%= content_tag :div, class: "progress mr-2 ml-2", data: { percent: @test_passage.progress_percent } do %>
+  <div class="progress-bar" role="progressbar"
+       aria-valuemin="0" aria-valuemax="100"><b><%= test_passage.progress_percent %>%</b></div>
+<% end %><p>
