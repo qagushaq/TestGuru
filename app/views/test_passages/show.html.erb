@@ -1,4 +1,6 @@
 <h1> <%= t('.passind_test', test: @test_passage.test.title) %></h1>
+<h3><%= @test_passage.current_question_number%> <%= t('.from')%> <%= t('.questions_counter', count: @test_passage.total_questions )%></h3>
+
 <br>
 
 <div class="form-group row">
