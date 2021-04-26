@@ -1,0 +1,4 @@
+<%= content_tag :div, class: "progress mr-2 ml-2", data: { percent: @test_passage.progress_percent } do %>
+  <div class="progress-bar" role="progressbar"
+       aria-valuemin="0" aria-valuemax="100"><b><%= test_passage.progress_percent %>%</b></div>
+<% end %><p>

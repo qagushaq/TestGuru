@@ -9,6 +9,10 @@ require("@rails/activestorage").start()
 require("channels")
 require("utilities/sorting")
 require("utilities/password_confirmation_check")
+require("jquery")
+require ("utilities/form_inline")
+require ("utilities/progress_bar")
+
 
 
 

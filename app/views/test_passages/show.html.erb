@@ -1,9 +1,12 @@
 <h1> <%= t('.passind_test', test: @test_passage.test.title) %></h1>
-<h3><%= @test_passage.question_number%> <%= t('.from')%> <%= t('.questions_counter', count: @test_passage.test.questions.count )%></h3>
+<h3><%= @test_passage.current_question_number%> <%= t('.from')%> <%= t('.questions_counter', count: @test_passage.total_questions )%></h3>
+
 <br>
 
 <div class="form-group row">
     <div class="form-group col-12 col-md-6 ml-3">
+			<%= render 'progress_bar', test_passage: @test_passage%>
+			<br>
       <div class="card">
         <div class="card-body">
           <%= @test_passage.current_question.body %>

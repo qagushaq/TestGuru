@@ -32,9 +32,8 @@ function checkPasswordConfirmation() {
   }
 
   if (password == passwordConfirmation) {
-      confirm()
-    else {
+    confirm()
+  }else {
       notconfirm()
-    }
   }
 }

@@ -41,6 +41,8 @@ ru:
       new:
         header: "Создать новый тест"
         back: "К списку тестов"
+      form_inline:
+        submit: "OK"
       form:
         prompt: "Выберите категорию"
         back: "К списку тестов"

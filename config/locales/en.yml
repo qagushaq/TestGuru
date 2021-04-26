@@ -41,6 +41,8 @@ ru:
       new:
         header: "Create new test"
         back: "Back to tests"
+      form_inline:
+        submit: "OK"
       form:
         prompt: "Choose category"
         back: "Back to tests"
@@ -127,7 +129,7 @@ ru:
   test_passages:
     show:
       passind_test: "You are passing %{test} test"
-      from: "из"
+      from: "from"
       next: 'Next question'
       questions_counter:
         one: "%{count} question"

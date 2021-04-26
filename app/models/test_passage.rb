@@ -22,12 +22,24 @@ class TestPassage < ApplicationRecord
     percent >= PERCENTS_SUCCESS
   end
 
+  def progress_percent
+    ((current_question_number.to_f - 1) / total_questions * 100).round
+  end
+
   def percent
     (correct_question.to_f * 100 / test.questions.count).round
   end
 
-  def question_number
-    test.questions.order(:id).where('id <= ?', current_question.id).count
+  def total_questions
+    test.questions.size
+  end
+
+  def current_question_number
+    if next_question || current_question
+      test.questions.order(:id).where('id < ?', current_question).count + 1
+    else
+      test.questions.count
+    end
   end
 
   private
@@ -49,7 +61,7 @@ class TestPassage < ApplicationRecord
   end
 
   def next_question
-    test.questions.order(:id).where('id > ?', current_question.id).first
+    test.questions.order(:id).where('id > ?', current_question&.id).first
   end
 
 end

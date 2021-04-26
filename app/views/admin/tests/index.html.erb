@@ -4,6 +4,8 @@
   <%= link_to t('.create'), new_admin_test_path %>
 </p>
 
+<%= render 'shared/errors', resource: @test %>
+
 <hr>
 <div class="row">
   <div class="container col-12 col-md-6 ml-3">
