@@ -26,8 +26,12 @@ class TestPassage < ApplicationRecord
     (correct_question.to_f * 100 / test.questions.count).round
   end
 
-  def question_number
-    test.questions.order(:id).where('id <= ?', current_question.id).count
+  def current_question_number
+    if next_question || current_question
+      test.questions.order(:id).where('id < ?', current_question).count + 1
+    else
+      test.questions.count
+    end
   end
 
   private
@@ -49,7 +53,7 @@ class TestPassage < ApplicationRecord
   end
 
   def next_question
-    test.questions.order(:id).where('id > ?', current_question.id).first
+    test.questions.order(:id).where('id > ?', current_question&.id).first
   end
 
 end

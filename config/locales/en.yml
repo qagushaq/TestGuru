@@ -129,11 +129,12 @@ ru:
   test_passages:
     show:
       passind_test: "You are passing %{test} test"
-      from: "из"
       next: 'Next question'
       questions_counter:
         one: "%{count} question"
         other: "%{count} questions"
+    progress_bar:
+      from: "from"
     result:
       completed: "%{test} test is completed."
       passed: "Test passed"

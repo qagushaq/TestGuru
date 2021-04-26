@@ -138,12 +138,13 @@ ru:
   test_passages:
     show:
       passind_test: "Сейчас вы проходите %{test} тест"
-      from: "из"
       next: 'Следующий вопрос'
       questions_counter:
         one: "%{count} вопроса"
         few: "%{count} вопросов"
         many: "%{count} вопросов"
+    progress_bar:
+      from: "из"
     result:
       completed: "%{test} тест завершен."
       passed: "Тест пройден"
