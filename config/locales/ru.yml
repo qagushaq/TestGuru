@@ -134,6 +134,10 @@ ru:
         gist_success_html: 'Gist %{gist} успешно создан.'
         gist_fail: 'Ошибка! Что-то пошло не так :('
 
+  feedbacks:
+    create:
+      success_feedback: "Ваше сообщение отправлено"
+
   test_passages:
     show:
       passind_test: "Сейчас вы проходите %{test} тест"
@@ -156,6 +160,9 @@ ru:
   tests_mailer:
     completed_test:
       subject: "Вы завершили тест"
+
+  feedbacks_mailer:
+    subject: "Новое сообщение с портала TestGuru"
 
   activerecord:
     attributes:

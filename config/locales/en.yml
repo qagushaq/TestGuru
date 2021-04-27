@@ -128,6 +128,10 @@ ru:
         gist_success_html: 'Gist %{gist} successfuly created'
         gist_fail: 'Something go wrong!!'
 
+  feedbacks:
+    create:
+      success_feedback: "Your message has been sent"
+
   test_passages:
     show:
       passind_test: "You are passing %{test} test"
@@ -149,3 +153,6 @@ ru:
   tests_mailer:
     completed_test:
       subject: "You have completed the test"
+      
+  feedbacks_mailer:
+    subject: "New message from TestGuru"
