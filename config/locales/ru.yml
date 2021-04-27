@@ -40,12 +40,11 @@ ru:
         delete:  "Удалить"
       new:
         header: "Создать новый тест"
-        back: "К списку тестов"
       form_inline:
         submit: "OK"
       form:
         prompt: "Выберите категорию"
-        back: "К списку тестов"
+        back: "Назад"
       show:
         header: "О тесте"
         title: "Название"
@@ -65,7 +64,6 @@ ru:
         edit: "Редактировать тест"
       edit:
         header: "Редактировать тест"
-        back: "К списку тестов"
 
     questions:
       question:
@@ -98,9 +96,10 @@ ru:
         back: "Назад"
       edit:
         header: "Редактирование ответа"
-        show: "Показать"
       form:
         back: "Назад"
+      new:
+        newanswer: "Новый ответ"
 
     gists:
       index:

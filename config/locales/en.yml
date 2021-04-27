@@ -40,12 +40,11 @@ ru:
         delete:  "Delete"
       new:
         header: "Create new test"
-        back: "Back to tests"
       form_inline:
         submit: "OK"
       form:
         prompt: "Choose category"
-        back: "Back to tests"
+        back: "Back"
       show:
         header: "About test"
         title: "Title"
@@ -62,7 +61,6 @@ ru:
         edit: "Edit test"
       edit:
         header: "Edit test"
-        back: "Back to tests"
     questions:
       show:
         test: "Test"
@@ -82,16 +80,20 @@ ru:
         show: "Show"
         edit: "Edit"
         delete: "Delete"
+      form:
+        back: "Back"
       show:
         question: "Question"
         answer: "Answer"
         correct: "Correct"
         edit: "Edit"
         back: "Back"
-
       edit:
-        show: "Back"
-        back: "Back"
+        header: "Edit"
+      new:
+        newanswer: "New answer"
+
+
       form:
         back: "Back"
 
