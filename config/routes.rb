@@ -3,6 +3,8 @@ Rails.application.routes.draw do
   root 'tests#index'
 
   resources :feedbacks, only: %i[new create]
+  post '/feedbacks/new', to: 'feedbacks#new'
+
   devise_for :users, path: :gurus, path_names: { sign_in: :login, sign_out: :logout }
 
   resources :tests, only: :index do
