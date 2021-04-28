@@ -1,4 +1,4 @@
-class FeedbacksMailer < ApplicationMailer
+class FeedbackMailer < ApplicationMailer
 
   def send_message(feedback)
     @email = feedback.email
@@ -6,5 +6,5 @@ class FeedbacksMailer < ApplicationMailer
 
     mail from: @email, subject: t('.subject')
   end
-  
+
 end
