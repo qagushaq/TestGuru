@@ -20,7 +20,7 @@
         <ol class="list-group list-group-flush">
         <%= form.collection_check_boxes :answer_ids, @test_passage.current_question.answers, :id, :body, include_hidden: false do |b| %>
           <li class="list-group-item">
-            <%= b.check_box id: "answer_ids_#{b.object.id}" %>
+            <%= b.check_box id: "answer_ids_#{b.object.id}", class: "checkbox" %>
             <%= b.label %>
           </li>
         <% end %>
@@ -30,7 +30,7 @@
 
   <div class="form-group col-12 col-md-6 ml-3">
     <%= link_to 'Create Gist', gist_test_passage_path(@test_passage), method: :post%>
-    <%= form.submit t('.next'), class: "btn btn-success" %>
+    <%= form.submit t('.next'), class: "btn btn-success d-none", id:"subm" %>
     <% end %>
   </div>
 </div>
