@@ -93,9 +93,7 @@ en:
       edit:
         header: "Edit"
       new:
-        newanswer: "New answer"
-
-
+        new_answer: "New answer"
       form:
         back: "Back"
 
@@ -147,7 +145,7 @@ en:
       passed: "Test passed"
       notpassed: "Test not passed"
       back: "Back to tests"
-      correctpercent: "Answered correct on"
+      correct_percent: "Answered correct on"
     gist:
       success: "Gist was successfully created"
       failure: "An error occurred while saving gist"

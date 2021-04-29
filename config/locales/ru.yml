@@ -101,7 +101,7 @@ ru:
       form:
         back: "Назад"
       new:
-        newanswer: "Новый ответ"
+        new_answer: "Новый ответ"
 
     gists:
       index:
@@ -154,7 +154,7 @@ ru:
       passed: "Тест пройден"
       notpassed: "Тест не пройден"
       back: "К списку тестов"
-      correctpercent: "Отвечено верно на"
+      correct_percent: "Отвечено верно на"
     gist:
       success: "Gist успешно сохранен"
       failure: "Во время сохранения gist произошла ошибка"
