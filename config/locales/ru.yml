@@ -40,6 +40,7 @@ ru:
         delete:  "Удалить"
       new:
         header: "Создать новый тест"
+        back: "Назад"
       form_inline:
         submit: "OK"
       form:
@@ -64,6 +65,7 @@ ru:
         edit: "Редактировать тест"
       edit:
         header: "Редактировать тест"
+        back: "Назад"
 
     questions:
       question:

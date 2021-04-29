@@ -1,4 +1,4 @@
-ru:
+en:
   question_from: 'Question from test'
   helpers:
     submit:
@@ -40,6 +40,7 @@ ru:
         delete:  "Delete"
       new:
         header: "Create new test"
+        back: "Back"
       form_inline:
         submit: "OK"
       form:
@@ -61,6 +62,7 @@ ru:
         edit: "Edit test"
       edit:
         header: "Edit test"
+        back: "Back"
     questions:
       show:
         test: "Test"
@@ -153,6 +155,6 @@ ru:
   tests_mailer:
     completed_test:
       subject: "You have completed the test"
-      
+
   feedbacks_mailer:
     subject: "New message from TestGuru"

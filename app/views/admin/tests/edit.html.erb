@@ -1,3 +1,5 @@
 <h1> <%= t('.header') + " " + @test.title%></h1>
 
 <%= render 'form' %>
+
+<%= link_to t('.back'), admin_test_path(@test) %>
