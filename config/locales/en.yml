@@ -124,9 +124,8 @@ en:
       updated: "Updated"
       actions: "Actions"
     gists:
-      create:
-        gist_success: 'Gist %{gist} successfuly created'
-        gist_failure: 'Something go wrong!!'
+      gist_success: 'Gist successfuly created'
+      gist_failure: 'Something go wrong!!'
 
   feedbacks:
     create:

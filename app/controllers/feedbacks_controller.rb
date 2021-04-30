@@ -6,7 +6,7 @@ class FeedbacksController < ApplicationController
 
   def create
     @feedback = Feedback.new(feedback_params)
-    if @feedback.valid?
+    if @feedback.save
       FeedbacksMailer.send_message(@feedback).deliver_now
       flash[:notice] = t('.success_feedback')
       redirect_to tests_url
