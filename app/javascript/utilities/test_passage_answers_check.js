@@ -1,23 +1,23 @@
 document.addEventListener('turbolinks:load', function() {
-let checkboxies = document.querySelector('.checkbox')
-checkboxies.addEventListener('click', showBtnNext)
-console.log(answered)
-var answered = false
-})
+  let form = document.getElementById('check-form')
+  form.addEventListener('click',showBtnNext)
+ })
 
-function showBtnNext() {
-  check_chekboxiex()
-  var next_question_btn = document.getElementById('subm')
-  if (answered == true) {
-    next_question_btn.classList.toggle('d-none')
-  }else {
-    next_question_btn.classList.toggle('d-none')
-  }
+function isChecked() {
+ let checked = false;
+ if (document.querySelectorAll('input[type=checkbox]:checked').length){
+   checked = true
+ }else
+ checked = false
+ return checked
 }
 
-function check_chekboxiex(){
-  if (document.querySelectorAll('input[type=checkbox]:checked').length){
-    answered = false
-  }else
-  answered = true
+function showBtnNext(event) {
+  let next_question_btn = document.getElementById('btn')
+  if(isChecked() && event.target.tagName == "INPUT" ) {
+    next_question_btn.classList.remove('d-none')
+  }
+  if(!isChecked()) {
+    next_question_btn.classList.add('d-none')
+  }
 }
