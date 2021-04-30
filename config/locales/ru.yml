@@ -133,8 +133,8 @@ ru:
       actions: "Действия"
     gists:
       create:
-        gist_success_html: 'Gist %{gist} успешно создан.'
-        gist_fail: 'Ошибка! Что-то пошло не так :('
+        gist_success: 'Гист %{gist} успешно создан!!'
+        gist_failure: 'Что-то пошло не так'
 
   feedbacks:
     create:
@@ -155,9 +155,6 @@ ru:
       notpassed: "Тест не пройден"
       back: "К списку тестов"
       correct_percent: "Отвечено верно на"
-    gist:
-      success: "Gist успешно сохранен"
-      failure: "Во время сохранения gist произошла ошибка"
 
   tests_mailer:
     completed_test:

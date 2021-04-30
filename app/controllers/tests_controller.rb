@@ -8,8 +8,13 @@ class TestsController < ApplicationController
   end
 
   def start
-    current_user.tests.push(@test)
-    redirect_to current_user.test_passage(@test)
+    if @test.test_to_pass?
+      current_user.tests.push(@test)
+      redirect_to current_user.test_passage(@test)
+    else
+      flash[:notice] = "Тест #{@test.title} еще дорабатывается, подождите"
+      redirect_to tests_path
+    end
   end
 
   private

@@ -125,8 +125,8 @@ en:
       actions: "Actions"
     gists:
       create:
-        gist_success_html: 'Gist %{gist} successfuly created'
-        gist_fail: 'Something go wrong!!'
+        gist_success: 'Gist %{gist} successfuly created'
+        gist_failure: 'Something go wrong!!'
 
   feedbacks:
     create:
