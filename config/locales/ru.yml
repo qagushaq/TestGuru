@@ -21,6 +21,7 @@ ru:
         category: "Категория"
         author: "Автор"
         amount_questions: "Количество вопросов"
+        time_to_pass: "Время на прохождение"
         created: "Создано"
         updated: "Обновлено"
         actions: "Действия"

@@ -42,6 +42,14 @@ class TestPassage < ApplicationRecord
     end
   end
 
+  def time_up?
+    test_pass_end_time ? Time.current > test_pass_end_time : false
+  end
+
+  def test_pass_end_time
+    created_at + test.time_to_pass.minutes if test.time_to_pass.present?
+  end
+
   private
 
   def before_validation_set_first_question

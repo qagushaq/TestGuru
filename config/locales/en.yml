@@ -20,11 +20,12 @@ en:
     tests:
       index:
         header: "Available tests"
-        title: "Название"
+        title: "Title"
         level: "Level"
         category: "Category"
         author: "Author"
         amount_questions: "Amount questions"
+        time_to_pass: "Time to pass"
         created: "Created"
         updated: "Updated"
         actions: "Actions"
