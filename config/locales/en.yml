@@ -1,4 +1,4 @@
-ru:
+en:
   question_from: 'Question from test'
   helpers:
     submit:
@@ -40,12 +40,12 @@ ru:
         delete:  "Delete"
       new:
         header: "Create new test"
-        back: "Back to tests"
+        back: "Back"
       form_inline:
         submit: "OK"
       form:
         prompt: "Choose category"
-        back: "Back to tests"
+        back: "Back"
       show:
         header: "About test"
         title: "Title"
@@ -62,7 +62,7 @@ ru:
         edit: "Edit test"
       edit:
         header: "Edit test"
-        back: "Back to tests"
+        back: "Back"
     questions:
       show:
         test: "Test"
@@ -82,16 +82,18 @@ ru:
         show: "Show"
         edit: "Edit"
         delete: "Delete"
+      form:
+        back: "Back"
       show:
         question: "Question"
         answer: "Answer"
         correct: "Correct"
         edit: "Edit"
         back: "Back"
-
       edit:
-        show: "Back"
-        back: "Back"
+        header: "Edit"
+      new:
+        new_answer: "New answer"
       form:
         back: "Back"
 
@@ -122,9 +124,12 @@ ru:
       updated: "Updated"
       actions: "Actions"
     gists:
-      create:
-        gist_success_html: 'Gist %{gist} successfuly created'
-        gist_fail: 'Something go wrong!!'
+      gist_success: 'Gist successfuly created'
+      gist_failure: 'Something go wrong!!'
+
+  feedbacks:
+    create:
+      success_feedback: "Your message has been sent"
 
   test_passages:
     show:
@@ -139,7 +144,7 @@ ru:
       passed: "Test passed"
       notpassed: "Test not passed"
       back: "Back to tests"
-      correctpercent: "Answered correct on"
+      correct_percent: "Answered correct on"
     gist:
       success: "Gist was successfully created"
       failure: "An error occurred while saving gist"
@@ -147,3 +152,6 @@ ru:
   tests_mailer:
     completed_test:
       subject: "You have completed the test"
+
+  feedbacks_mailer:
+    subject: "New message from TestGuru"

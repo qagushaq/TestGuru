@@ -8,3 +8,16 @@
 .failed_test{
   color: red;
 }
+
+.btn_next {
+   cursor: pointer;
+   border: 1px solid white;
+   padding: 10px;
+   width:100%;
+   background-color: rgb(114, 189, 114);
+   color: white;
+ }
+ .btn_next_unactive {
+   background-color: rgb(132, 134, 132);
+   cursor: default;
+ }

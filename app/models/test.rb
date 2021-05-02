@@ -1,5 +1,5 @@
 class Test < ApplicationRecord
-  
+
   has_many :test_passages, dependent: :destroy
   has_many :users, through: :test_passages, dependent: :destroy
   has_many :questions, dependent: :destroy
@@ -16,6 +16,10 @@ class Test < ApplicationRecord
 
   def self.by_category(category)
     by_category(title_name).order(title: :desc).pluck(:title)
+  end
+
+  def test_to_pass?
+    !(questions.empty? || questions.joins(:answers).empty?)
   end
 
 end
