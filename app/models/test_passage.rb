@@ -43,11 +43,11 @@ class TestPassage < ApplicationRecord
   end
 
   def time_up?
-    test_pass_end_time ? Time.current > test_pass_end_time : false
+    time_left.negative?
   end
 
-  def test_pass_end_time
-    created_at + test.time_to_pass.minutes if test.time_to_pass.present?
+  def time_left
+    test.time_for_pass_in_sec - (Time.current - created_at)
   end
 
   private

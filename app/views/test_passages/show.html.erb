@@ -34,3 +34,9 @@
     <% end %>
   </div>
 </div>
+
+<% if @test_passage.test.time_to_pass.present? %>
+  <%= content_tag :div, class: 'timer col-12 col-md-6', data:{time_left: @test_passage.time_left} do %>
+    <h3 class='time'></h3>
+  <%end%>
+<% end %>

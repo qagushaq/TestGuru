@@ -36,6 +36,7 @@ en:
           delete: "Delete test"
           back: "Back to tests"
       test:
+        time_units: " Minutes"
         show: "Show"
         edit: "Edit"
         delete:  "Delete"
@@ -52,6 +53,7 @@ en:
         title: "Title"
         level: "Level"
         category: "Category"
+        time_to_pass: "Time to pass"
         created: "Created"
         updated: "Updated"
         amount_questions: "Amount questions"
@@ -114,6 +116,7 @@ en:
   tests:
     test:
       start: "Start test"
+      time_units: " Minutes"
     index:
       header: "Available tests"
       title: "Title"
@@ -124,9 +127,7 @@ en:
       created: "Created"
       updated: "Updated"
       actions: "Actions"
-    gists:
-      gist_success: 'Gist successfuly created'
-      gist_failure: 'Something go wrong!!'
+      time_to_pass: "Time to passage"
 
   feedbacks:
     create:

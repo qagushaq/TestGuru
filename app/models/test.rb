@@ -22,4 +22,8 @@ class Test < ApplicationRecord
     !(questions.empty? || questions.joins(:answers).empty?)
   end
 
+  def time_for_pass_in_sec
+    time_to_pass*60 if time_to_pass.present?
+  end
+
 end
