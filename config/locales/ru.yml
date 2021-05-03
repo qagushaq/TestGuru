@@ -11,6 +11,7 @@ ru:
         level: "Уровень"
         author: "Автор"
         category_id: "Категория"
+        time_to_pass: "Время на прохождение"
 
   admin:
     tests:

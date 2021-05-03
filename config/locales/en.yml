@@ -11,6 +11,7 @@ en:
         level: "Level"
         author: "Author"
         category_id: "Category"
+        time_to_pass: "Time to pass"
 
   admin:
     test:
