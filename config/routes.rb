@@ -5,9 +5,7 @@ Rails.application.routes.draw do
   resources :feedbacks, only: %i[new create]
 
   resources :user_badges, only: :index
-  resources :badges
-
-
+  
   devise_for :users, path: :gurus, path_names: { sign_in: :login, sign_out: :logout }
 
   resources :tests, only: :index do
