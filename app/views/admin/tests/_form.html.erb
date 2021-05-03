@@ -22,6 +22,12 @@
     <%= form.collection_select :user_id, User.all, :id, :first_name, prompt: true %>
   </p>
 
+  <p>
+    <%= form.label :time_to_pass %></br>
+    <%= form.number_field :time_to_pass, id: :test_time_to_pass %>
+  </p>
+
+
   <p><%= form.submit %></p>
 
 <% end %>

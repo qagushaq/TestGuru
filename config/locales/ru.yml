@@ -21,6 +21,7 @@ ru:
         category: "Категория"
         author: "Автор"
         amount_questions: "Количество вопросов"
+        time_to_pass: "Время на прохождение"
         created: "Создано"
         updated: "Обновлено"
         actions: "Действия"
@@ -35,6 +36,7 @@ ru:
           delete: "Удалить тест"
           back: "К списку тестов"
       test:
+        time_units: " Минут"
         show: "Показать"
         edit: "Изменить"
         delete:  "Удалить"
@@ -51,10 +53,10 @@ ru:
         title: "Название"
         level: "Уровень"
         category: "Категория"
-        countq: "Количество вопросов"
+        time_to_pass: "Время на прохождение"
         created: "Создано"
         updated: "Обновлено"
-        amount_questions: "Количество вопросов в тесте:"
+        amount_questions: "Количество вопросов в тесте"
         questions_counter:
           one: "%{count} вопрос"
           few: "%{count} вопроса"
@@ -121,6 +123,7 @@ ru:
   tests:
     test:
       start: "Начать тест"
+      time_units: " Минут"
     index:
       header: 'Доступные тесты'
       title: "Название"
@@ -131,6 +134,7 @@ ru:
       created: "Создано"
       updated: "Обновлено"
       actions: "Действия"
+      time_to_pass: "Время на прохождение"
 
 
 

@@ -16,6 +16,7 @@ function showBtnNext(event) {
   let next_question_btn = document.getElementById('btn')
   if(isChecked() && event.target.tagName == "INPUT" ) {
     next_question_btn.classList.remove('btn_next_unactive')
+    next_question_btn.disabled = false
   }
   if(!isChecked()) {
     next_question_btn.classList.add('btn_next_unactive')
