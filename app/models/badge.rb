@@ -1,5 +1,5 @@
 class Badge < ApplicationRecord
-  
+
   has_many :user_badges
   has_many :users, through: :user_badges
   validates :title, :icon, :rule, presence: true
@@ -9,5 +9,12 @@ class Badge < ApplicationRecord
       'Passing the test successfully on the first try' => :success_first_try,
       'Passing all tests of a certain level' => :all_tests_level_complete
   }.freeze
+
+  def self.icons
+    icons_path = "assets/images/badges/*"
+    badges = Dir.glob(icons_path)
+    badges.map { |badge_path| badge_path.gsub(icons_path, '') }
+
+  end
 
 end
