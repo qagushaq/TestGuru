@@ -108,6 +108,27 @@ en:
         gist_url: "Gist url"
         user_email: "Email"
 
+    badges:
+      index:
+        header: "Badges"
+        show: "Show"
+        edit: "Edit"
+        delete: "Delete"
+        new_badge: "New badge"
+      new:
+        header: "New badge"
+        back: "Back"
+      edit:
+        header: "Edit badge"
+        back: "Back"
+        show: "Show"
+      show:
+        title: "Title"
+        users: "Users"
+        rule: "Achivement"
+        edit: "Edit"
+        back: "Back"
+
   shared:
     errors:
       header:

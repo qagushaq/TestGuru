@@ -1,5 +1,5 @@
 <p>
-  <strong>Title</strong>
+  <strong><%= t('.title')%></strong>
   <%= @badge.title %>
 </p>
 
@@ -8,17 +8,17 @@
 </p>
 
 <p>
-  <strong>Users</strong>
+  <strong><%= t('.users')%></strong>
   <% @badge.users.each do |user|%>
     <b><%= user.email %></b>
   <% end %>
 </p>
 
 <p>
-  <strong>Rule</strong>
+  <strong><%= t('.rule')%></strong>
   <%= @badge.rule %>
 </p>
 
 
-<%= link_to 'Edit', edit_admin_badge_path(@badge) %> |
-<%= link_to 'Back', admin_badges_path %>
+<%= link_to t('.edit'), edit_admin_badge_path(@badge) %> |
+<%= link_to t('.back'), admin_badges_path %>
