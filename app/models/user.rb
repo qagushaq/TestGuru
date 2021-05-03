@@ -10,6 +10,8 @@ class User < ApplicationRecord
   has_many :test_passages
   has_many :tests, through: :test_passages, dependent: :destroy
   has_many :authored_tests, class_name: 'Test', foreign_key: :user_id
+  has_many :badges, through: :user_badges
+  has_many :user_badges
 
   def tests_by_level(level)
     tests.where(level: level)
