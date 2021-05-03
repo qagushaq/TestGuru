@@ -1,0 +1,13 @@
+<h1>Badges</h1>
+  <% @badges.each do |badge| %>
+    <div>
+      <h3><%= badge.title %></h3>
+      <%= badge.image %>
+      <b><%= badge.rule %></b>
+      <%= link_to 'Show', admin_badge_url(badge) %>
+      <%= link_to 'Edit', edit_admin_badge_url(badge) %>
+      <%= link_to 'Delete', admin_badge_url(badge),
+                      method: :delete, data: { confirm: 'Are u sure' }%>
+    </div>
+  <% end %>
+<%= link_to 'New badge', new_admin_badge_path %>

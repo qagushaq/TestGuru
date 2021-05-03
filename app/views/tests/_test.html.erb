@@ -6,10 +6,11 @@
   <td class="align-middle"><%= test.user_id %></td>
   <td class="align-middle"><%= test.questions.count %></td>
   <td class="align-middle"><%= test.time_to_pass%>
+  <td class="align-middle"><%= test.time_to_pass%>
     <% if test.time_to_pass.present?%>
       <%=t('.time_units')%>
     <% end %>
-    </td>
+  </td>
   <td class="align-middle"><%= button_to t('.start'), start_test_path(test), class: "btn btn-success" %></td>
 </tr>
 <% end %>
