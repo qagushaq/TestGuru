@@ -1,42 +1,9 @@
 class BadgesController < ApplicationController
 
-  before_action :set_badge, only: %i[show edit update destroy]
-  before_action :set_badges, only: :index
+  before_action :set_badge, only: %i[show]
 
   def index
-  end
-
-  def show
-  end
-
-  def new
-    @badge = Badge.new
-  end
-
-  def create
-    @badge = Badge.new(badge_params)
-
-    if @badge.save
-      redirect_to admin_badge_url(@badge)
-    else
-      render :new
-    end
-  end
-
-  def edit
-  end
-
-  def update
-    if @badge.update(badge_params)
-      redirect_to admin_badge_url(@badge)
-    else
-      render :edit
-    end
-  end
-
-  def destroy
-    @badge.destroy
-    redirect_to admin_badges_url
+    @badges = Badge.all
   end
 
   private
@@ -45,11 +12,4 @@ class BadgesController < ApplicationController
     @badge = Badge.find(params[:id])
   end
 
-  def set_badges
-    @badges = Badge.all
-  end
-
-  def badge_params
-    params.require(:badge).permit(:title, :image, :rule)
-  end
 end

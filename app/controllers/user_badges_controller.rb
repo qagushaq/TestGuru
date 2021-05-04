@@ -4,5 +4,5 @@ class UserBadgesController < ApplicationController
     @badges = Badge.all
     @user_badges = current_user.badges
   end
-  
+
 end
