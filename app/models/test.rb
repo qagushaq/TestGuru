@@ -14,6 +14,8 @@ class Test < ApplicationRecord
   scope :hard, -> { where(level: 5..Float::INFINITY).order(created_at: :desc) }
   scope :by_category, -> (title_name) { joins(:category).where(categories: { title: title_name }) }
 
+  scope :ready_tests, -> { where(in_developing: false) }
+
   def self.by_category(category)
     by_category(title_name).order(title: :desc).pluck(:title)
   end
