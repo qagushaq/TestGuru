@@ -16,17 +16,17 @@ class BadgesService
     @user.badges << badge
   end
 
-  def category_completed?
+  def category_completed?(category_id)
     user_passed_tests_by_category = @user.passed_tests.where(category_id: category_id ).distinct.size
     all_tests_category = Category.find(category_id).tests.size
     all_tests_category == user_passed_tests_by_category
   end
 
-  def success_first_try?
-    @user.tests.where(test_id: test_id).order(:updated_at).first.success_passed
+  def success_first_try?(test_id)
+    @user.passed_tests.where(test_id: test_id).order(:updated_at).first.success_passed.count == 1
   end
 
-  def level_complete?
+  def level_complete?(level)
     user_passed_tests_by_level = @user.passed_tests.distinct(:test_id).where(level: level).size
     all_tests_level = Test.where(level: level).size
     user_passed_tests_by_level == all_tests_level

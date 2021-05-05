@@ -7,8 +7,6 @@ class TestPassagesController < ApplicationController
   end
 
   def result
-    badge = BadgesService.new(@test_passage)
-    badge.call
   end
 
   def gist
@@ -31,6 +29,9 @@ class TestPassagesController < ApplicationController
 
     if @test_passage.completed? || @test_passage.time_up?
       TestsMailer.completed_test(@test_passage).deliver_now
+      badge = BadgesService.new(@test_passage)
+      badge.call
+      flash.now[:notice] = "Achievement received" if @test_passage.success_passed == true && badge.present?
       redirect_to result_test_passage_path(@test_passage)
     else
       render :show
