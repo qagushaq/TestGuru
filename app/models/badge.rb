@@ -3,7 +3,7 @@ class Badge < ApplicationRecord
   has_many :user_badges, dependent: :destroy
   has_many :users, through: :user_badges
 
-  validates :title, :image, :rule, presence: true
+  validates :title, :rule, :image, :value, presence: true
 
   BADGE_RULES = {
       'Passing all tests in a category' => :category_completed,

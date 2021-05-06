@@ -19,6 +19,11 @@
   <%= @badge.rule %>
 </p>
 
+<p>
+  <strong><%= t('.value')%></strong>
+   <%= @badge.value%>
+</p>
+
 
 <%= link_to t('.edit'), edit_admin_badge_path(@badge) %> |
 <%= link_to t('.back'), admin_badges_path %>

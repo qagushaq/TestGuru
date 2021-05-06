@@ -126,6 +126,7 @@ en:
         title: "Title"
         users: "Users"
         rule: "Achivement"
+        value: "Value"
         edit: "Edit"
         back: "Back"
 

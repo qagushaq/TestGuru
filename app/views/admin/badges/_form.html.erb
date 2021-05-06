@@ -17,6 +17,11 @@
       <%= form.select :rule, options_for_select(Badge::BADGE_RULES)%>
     </p>
 
+    <p>
+      <%= form.label :value%>
+      <%= form.text_field :value%>
+    </p>
+
     <p><%= form.submit %></p>
   </div>
 <% end %>

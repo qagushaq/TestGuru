@@ -8,7 +8,7 @@ class BadgesService
 
   def call
     Badge.all.each do |badge|
-      reward(badge) if send("#{badge.rule}?".to_sym, badge.rule) && !UserBadge.find_by(user_id: @user.id, badge_id: badge.id)
+      reward(badge) if send("#{badge.rule}?".to_sym, badge.value) && !UserBadge.find_by(user_id: @user.id, badge_id: badge.id)
     end
   end
 

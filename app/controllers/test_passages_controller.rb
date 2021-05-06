@@ -33,10 +33,8 @@ class TestPassagesController < ApplicationController
         badge = BadgesService.new(@test_passage)
         badge.call
         flash.now[:notice] = "Achievement received"
-        redirect_to result_test_passage_path(@test_passage)
-      else
-        redirect_to result_test_passage_path(@test_passage)
       end
+      redirect_to result_test_passage_path(@test_passage)
     else
       render :show
     end
