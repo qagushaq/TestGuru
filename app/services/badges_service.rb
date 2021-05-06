@@ -8,7 +8,7 @@ class BadgesService
 
   def call
     Badge.all.each do |badge|
-      reward(badge) if send("#{badge.rule}?".to_sym, badge.value) && !UserBadge.find_by(user_id: @user.id, badge_id: badge.id)
+      reward(badge) if send("#{badge.rule}?", badge.value) && !UserBadge.find_by(user_id: @user.id, badge_id: badge.id)
     end
   end
 
@@ -16,8 +16,9 @@ class BadgesService
     @user.badges << badge
   end
 
+
   def category_completed?(category_id)
-    user_passed_tests_by_category = @user.tests.joins(:categories).where(category_id: category_id).distinct.size
+    user_passed_tests_by_category = TestPassage.joins(:test).where(tests: {category_id: category_id }, user_id: @user.id ).distinct.size
     all_tests_category = Category.find(category_id).tests.size
     all_tests_category == user_passed_tests_by_category
   end
