@@ -113,6 +113,29 @@ ru:
         gist_url: "Gist ссылка"
         user_email: "Почта"
 
+  badges:
+    index:
+      header: "Бейдж"
+      show: "Показать"
+      edit: "Редактировать"
+      delete: "Удалить"
+      new_badge: "Создать новый бейдж"
+    new:
+      header: "Новый бейдж"
+      back: "Назад"
+    edit:
+      header: "Редактировать бейдж"
+      back: "Назад"
+      show: "Показать"
+    show:
+      title: "Название"
+      users: "Пользователи"
+      rule: "Ачивка"
+      value: "Значение"
+      edit: "Редактировать"
+      back: "Назад"
+
+
   shared:
     errors:
       header:

@@ -28,6 +28,12 @@
   </p>
 
 
+  <p>
+    <%= form.label :in_developing%>
+    <%= radio_button('test', 'in_developing', false) %><span>No</span>
+    <%= radio_button('test', 'in_developing', true) %><span>Yes</span>
+  </p>
+
   <p><%= form.submit %></p>
 
 <% end %>

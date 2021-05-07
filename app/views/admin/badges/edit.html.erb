@@ -1,0 +1,5 @@
+<h1><%= t('.header')%></h1>
+
+<%= render 'form', badge: @badge %>
+<%= link_to t('.show'), admin_badge_url(@badge) %> |
+<%= link_to t('.back'), admin_badges_url %>

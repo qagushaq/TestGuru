@@ -1,0 +1,29 @@
+<p>
+  <strong><%= t('.title')%></strong>
+  <%= @badge.title %>
+</p>
+
+<p>
+  <%= image_tag(@badge.image, :alt => "image", size: 300) %>
+</p>
+
+<p>
+  <strong><%= t('.users')%></strong>
+  <% @badge.users.each do |user|%>
+    <b><%= user.email %></b>
+  <% end %>
+</p>
+
+<p>
+  <strong><%= t('.rule')%></strong>
+  <%= @badge.rule %>
+</p>
+
+<p>
+  <strong><%= t('.value')%></strong>
+   <%= @badge.value%>
+</p>
+
+
+<%= link_to t('.edit'), edit_admin_badge_path(@badge) %> |
+<%= link_to t('.back'), admin_badges_path %>

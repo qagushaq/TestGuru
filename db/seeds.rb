@@ -1,6 +1,6 @@
 users = User.create!([
   {first_name: :Alexey, last_name: 'Lukashevich', email: 'qwerty24164444@gmail.com', password: '12345678', type: 'Admin'},
-  {first_name: :Nastya, last_name: 'Lukashevich', email: 'lukashevich2211@gmail.com', password: '12345678', type: 'User'},
+  {first_name: :Nastya, last_name: 'Lukashevich', email: 'lukashevich2211@gmail.com', password: '12345678', type: 'User'}
   ])
 
 categories = Category.create!([
@@ -10,11 +10,11 @@ categories = Category.create!([
 ])
 
 tests = Test.create!([
-  {title: :Ruby, level: 2, category: categories[0], author: users[0]},
-  {title: :HTML, level: 1, category: categories[1], author: users[1]},
-  {title: :SQL, level: 1, category: categories[0], author: users[0]},
-  {title: :Linux, level: 4, category: categories[2], author: users[1]},
-  {title: :Rails, level: 3, category: categories[0], author: users[0]}
+  {title: :Ruby, level: 2, category: categories[0], author: users[0], in_developing: false},
+  {title: :HTML, level: 1, category: categories[1], author: users[1], in_developing: false},
+  {title: :SQL, level: 1, category: categories[0], author: users[0], in_developing: false},
+  {title: :Linux, level: 4, category: categories[2], author: users[1], in_developing: false},
+  {title: :Rails, level: 3, category: categories[0], author: users[0], in_developing: false}
 ])
 
 questions = Question.create!([
