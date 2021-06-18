@@ -3,7 +3,7 @@
   <td class="align-middle"><%= test.title %></td>
   <td class="align-middle"><%= test_level(test) %></td>
   <td class="align-middle"><%= test.category.title %></td>
-  <td class="align-middle"><%= test.user_id %></td>
+  <td class="align-middle"><%= test.author.first_name %></td>
   <td class="align-middle"><%= test.questions.count %></td>
   <td class="align-middle"><%= test.time_to_pass%>
     <% if test.time_to_pass.present?%>
